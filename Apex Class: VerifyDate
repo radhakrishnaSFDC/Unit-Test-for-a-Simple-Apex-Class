@@ -1,0 +1,8 @@
+public class VerifyDate {
+    public static Date validateDate(Date inputDate, Date startDate, Date endDate) {
+        if (inputDate < startDate || inputDate > endDate) {
+            inputDate = Date.newInstance(inputDate.year(), inputDate.month(), Date.daysInMonth(inputDate.year(), inputDate.month()));
+        }
+        return inputDate;
+    }
+}
